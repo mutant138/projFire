@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      form {
+        margin-bottom: 20px;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      select {
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+
+      button[type="submit"],
+      button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover,
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #attendanceRecords {
+        margin-top: 20px;
+      }
+
+      .attendance-record {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+
+      .attendance-record p {
+        margin: 5px 0;
+      }
+
+      /* Styles for buttons */
+      #viewAllAttendanceBtn,
+      #viewUserAttendanceBtn,
+      #viewDateAttendanceBtn,
+      #viewUserDateAttendanceBtn {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Home Page</h2>
+    <form id="markAttendanceForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+      <label for="status">Attendance Status:</label>
+      <select id="status" name="status" required>
+        <option value="present">Present</option>
+        <option value="absent">Absent</option>
+      </select>
+      <button type="submit">Mark Attendance</button>
+    </form>
+
+    <h2>View Attendance Records</h2>
+    <button id="viewAllAttendanceBtn">View All Attendance</button>
+    <button id="viewUserAttendanceBtn">View User Attendance</button>
+    <button id="viewDateAttendanceBtn">View Date Attendance</button>
+    <button id="viewUserDateAttendanceBtn">View User Date Attendance</button>
+
+    <div id="attendanceRecords"></div>
+    <script src="../home.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+      integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
